@@ -1,0 +1,197 @@
+.element {
+  width: 50%;
+}
+
+/* Responsif pada layar ponsel atau tablet dalam orientasi potret */
+@media screen and (max-width: 767px) {
+  .element {
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .foto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .caption h2 {
+    font-size: 16px;
+  }
+
+  .caption p {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Stil untuk tampilan desktop atau laptop */
+@media screen and (min-width: 768px) {
+  /* Aturan CSS untuk tampilan desktop atau laptop */
+  /* Misalnya: */
+  .element {
+    font-size: 20px;
+  }
+}
+
+.box {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #ffe6d4;
+  border-radius: 5px;
+  box-shadow: 0 0 5px grey;
+}
+
+/* styleaboutus.css */
+
+/* Styling header */
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #333;
+}
+
+/* Styling box */
+
+.foto-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.box img {
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box img:hover {
+  transform: scale(1.1);
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+.caption h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.caption p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Styling footer */
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#contact p {
+  margin: 0;
+}
+
+/* Styling container */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.ibb.co/rQ5004M/borobudur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsif pada layar sangat kecil (ponsel potret yang sangat kecil) */
+@media screen and (max-width: 480px) {
+  .element {
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .foto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .caption h2 {
+    font-size: 14px;
+  }
+
+  .caption p {
+    font-size: 10px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+
+.back-button {
+  border-style: none;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 12px 28px;
+  font-family: "system-ui";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  color: white;
+  background-color: transparent;
+  padding: 20px 32px;
+  border-radius: 10px;
+  font-weight: bold;
+}

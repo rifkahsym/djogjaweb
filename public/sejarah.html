@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesejarah.css" />
+    <title>Sejarah Kota Yogyakarta</title>
+</head>
+<body>
+    <header>
+        <h1><a href="jogja.html" class="link">dJogja</a></h1>
+    </header>
+
+    <div id="current-time"></div>
+
+    <main>
+        <audio autoplay loop>
+            <source src="jogjaistimewa.mp3" type="audio/mp3" />
+        </audio>
+
+        <div id="info">
+            <div class="card">
+                <a href="https://youtu.be/eoTq8UuMOd8">
+                <img
+                    src="https://i.ibb.co/y66LgdG/prambanan.jpg"
+                    alt="candi-prambanan"
+                    border="0"/>
+                </a>
+                <p>
+                    <h3>Kerajaan Mataram Kuno</h3>
+                    Pada abad ke-8, wilayah Yogyakarta dikuasai oleh Kerajaan Mataram Kuno yang dipimpin oleh Rakai Pikatan.
+                    Pada masa itu, Mataram menjadi pusat kebudayaan dan keagamaan di Pulau Jawa. Peninggalan bersejarah seperti
+                    Candi Prambanan dan Candi Ratu Boko adalah bukti kejayaan Kerajaan Mataram pada masa tersebut.
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/Z-ycDOrxkNw">
+                <img
+                    src="https://i.ibb.co/qBQPdtb/sultan.jpg"
+                    alt="sultan-hamengkubowono-IX"
+                    border="0"/>
+                </a>
+                <p>
+                    <h3>Pendirian Kesultanan Yogyakarta</h3>
+                    Pada tahun 1755, Kesultanan Yogyakarta didirikan oleh Sultan Hamengkubuwono I sebagai hasil perjanjian dengan pemerintah kolonial Belanda.
+                    Kesultanan Yogyakarta menjadi salah satu kerajaan yang memiliki peran penting dalam perjuangan kemerdekaan Indonesia. Sultan Hamengkubuwono IX, yang merupakan sultan saat proklamasi kemerdekaan, menjadi salah satu pemimpin nasional yang berperan dalam memperjuangkan kemerdekaan Indonesia.
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/VXrEsOTQ0as">
+                <img
+                    src="https://i.ibb.co/tmFN0Xt/jogja.jpg"
+                    alt="jogja"
+                    border="0"/>
+                </a>
+                <p>
+                    <h3>Pembentukan Kota Yogyakarta</h3>
+                    Pada tahun 1946, dalam upaya untuk mempertahankan kedaulatan dan memperkuat perjuangan melawan penjajah, Kota Yogyakarta didirikan.
+                    Kota ini dipilih sebagai ibu kota sementara Republik Indonesia oleh Presiden Soekarno. Hingga saat ini, Yogyakarta tetap menjadi salah satu pusat kebudayaan, pendidikan, dan pariwisata yang terkenal di Indonesia.
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/rW5zGXI8rPo">
+                <img
+                    src="https://i.ibb.co/Z8Z7RtB/istimewa.jpg"
+                    alt="jogja-istimewa"
+                    border="0"/>
+                </a>
+                <p>
+                    <h3>Keistimewaan Kota Yogyakarta</h3>
+                    Salah satu hal yang membuat Yogyakarta istimewa adalah adanya dua kesultanan yang masih berdiri hingga saat ini, yaitu Kesultanan Yogyakarta dan Kesultanan Pakualaman.
+                    Kedua kesultanan tersebut memiliki peran penting dalam menjaga budaya dan tradisi Jawa di kota ini. Selain itu, Yogyakarta juga dikenal dengan keberagaman seninya, kulinernya yang lezat, serta universitas-universitas terkemuka seperti Universitas Gadjah Mada.
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/wsHEnf3WiLQ">
+                <img
+                    src="https://i.ibb.co/RQMqx84/taman-sari.webp"
+                    alt="taman-sari"
+                    border="0"/>
+                </a>
+                <p>
+                    <h3>Wisata Sejarah di Yogyakarta</h3>
+                    Selain memiliki sejarah yang kaya, Yogyakarta juga menawarkan banyak tempat wisata sejarah yang menarik. Beberapa tempat yang populer dikunjungi adalah Candi Borobudur, Candi Prambanan, Kraton Yogyakarta, dan Taman Sari. Wisatawan dapat menikmati keindahan arsitektur dan merasakan suasana kuno di tempat-tempat tersebut.
+                </p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://i.ibb.co/4SR7XJD/Museum-Affandi.webp"
+                    alt="Museum-Affandi"
+                    border="0"/>
+                <p>
+                    <h3>Tempat Bersejarah</h3>
+                    Kota Jogja memiliki banyak tempat bersejarah, antara lain:
+                    <ul>
+                        <li>Keraton Yogyakarta</li>
+                        <li>Tugu Yogyakarta</li>
+                        <li>Museum Benteng Vredeburg</li>
+                        <li>Museum Affandi</li>
+                        <li>Makam Raja-Raja Mataram</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </main>
+    <a href="menu.html" class="back-button">Back</a>
+    <script>
+            // Mendapatkan waktu dan cuaca saat ini di Jogja menggunakan OpenWeatherMap API
+            const apiKey = "0586443b35ef8d9fe50387c6dc3b25d2"; // Ganti dengan API key Anda dari OpenWeatherMap
+    
+            function getCurrentTime() {
+              const currentTimeElement = document.getElementById("current-time");
+              const currentTime = new Date().toLocaleTimeString("id-ID", {
+                timeStyle: "short",
+                hour12: false
+              });
+              currentTimeElement.innerHTML =
+                "Waktu terkini: " + currentTime;
+            }
+    
+            getCurrentTime();
+    
+            // Mengupdate waktu setiap menit
+            setInterval(getCurrentTime, 60000);
+          </script>
+    </body>
+</html>

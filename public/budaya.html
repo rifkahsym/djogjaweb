@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylebudaya.css" />
+    <title>Kebudayaan Jogja</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="jogja.html" class="link">dJogja</a></h1>
+    </header>
+
+    <div id="current-time"></div>
+
+    <main>
+      <audio autoplay loop>
+        <source src="jogjaistimewa.mp3" type="audio/mp3" />
+      </audio>
+      <!-- <h1>Budaya</h1> -->
+      <div id = "info">
+        <div class = "card">
+          <a href="https://youtu.be/4Th9RP8THR8">
+            <img
+            src="https://i.ibb.co/42RQHRC/batik.jpg"
+            alt="Batik"
+            border="0"/>
+          </a>
+            <p>
+            <h3>Batik</h3>
+             Batik sudah menjadi kebudayaan yang diturunkan
+              dari nenek moyang. Batik menjadi karya seni yang tidak sekedar goresan
+              canting yang tampak cantik di mata, tapi juga kaya akan makna. Batik
+              yang cukup lama dan bisa menjadi wisata budaya Jogja adalah batik
+              Giriloyo. Karena kepopuleran batik ini, kampung di Jogja ini bahkan
+              kedatangan tamu asing dari berbagai belahan dunia, seperti Asia,
+              Amerika, Afrika dan Eropa. Sudah terbukti bahwa batik ini sudah go
+              internasional.
+          </p>
+        </div>
+      <div class = "card">
+        <a href= "https://youtu.be/feWYlXUKZ1M">
+          <img
+          src="https://i.ibb.co/xXPZX12/sekaten.jpg"
+          alt="sekaten"
+          border="0"/>
+        </a>
+          <p>
+          <h3>Sekaten</h3>
+            Sekatenan bisa dikatakan salah satu dari adat budaya Jogja yang sudah
+            dilakukan selama bertahun-tahun. Mungkin sejaka Islam masuk ke tanah
+            Jawa karena Sekatenan adalah acara tahunan pesta rakyat yang dilakukan
+            di Keraton Ngayogyakarta Hadiningrat untuk memperingati hari kelahiran
+            Nabi Muhammad tanggal 5 Rabiul Awal Kalender Islam. Wisata adat paling
+            terkenal dari Sekatenan adalah pasar malamnya. Anda bisa bertandang ke
+            Alun-Alun Utara Keraton Jogjakarta. Pasar malam ini berlangsung selama
+            sebulan sebelum tanggal 5 Rabiul Awal.
+          </p>
+        </div>
+      <div class = "card">
+        <a href="https://youtu.be/_McmW-fqa_E">
+          <img
+          src="https://i.ibb.co/SyFfgBC/sendratari-ramayana.jpg"
+          alt="sendratari-ramayana"
+          border="0"/>
+        </a>
+          <p>
+          <h3>Sendratari Ramayana</h3>
+            Setiap wisatawan asing yang datang ke Jogja, hampir pasti meluangkan
+            waktunya untuk melihat Sendratari Ramayana, sebuah seni tari dan drama
+            yang digabungkan menjadi satu pertuntjukan yang apik tanpa dialog
+            dengan certia Ramayana. Secara singkat, ceritanya mengenai Sri Rama
+            yang berusaha keras untuk menyelematkan istri kesayangannya, Dewi
+            Shinta yang telah diculik oleh Rahwana. Begitu terkenalnya budaya asli
+            Jogja ini, Sendratari Ramayana juga dimainkan di beberapa negara
+            tetangga seperti Malaysia, Laos, Kamboja, Singapura, Thailand hingga
+            India dan Sri Lanka.
+          </p>
+        </div>
+      <div class = "card">
+        <a href="https://youtu.be/Y2Z5Z9PXSTI">
+          <img
+          src="https://i.ibb.co/GMjy9xJ/Wayang.jpg"
+          alt="Wayang"
+          border="0"/>
+        </a>
+          <p>
+          <h3>Wayang Kulit</h3>
+            Wayang kulit adalah bentuk tradisional dari kesenian wayang yang aslinya ditemukan dalam budaya Jawa dan Bali di Indonesia.Narasi wayang kulit seringkali berkaitan dengan tema utama kebaikan melawan kejahatan.Wayang berasal dari kata "Ma Hyang" yang artinya menuju kepada roh spiritual, dewa, atau Tuhan Yang Maha Esa. Ada juga yang mengartikan wayang adalah istilah bahasa Jawa yang bermakna "bayangan", hal ini disebabkan karena penonton juga bisa menonton wayang dari belakang kelir atau hanya bayangannya saja.
+          <p>
+      </div>
+    </div>
+    </main>
+    <a href="menu.html" class="back-button">Back</a>
+    <script>
+        // Mendapatkan waktu dan cuaca saat ini di Jogja menggunakan OpenWeatherMap API
+        const apiKey = "0586443b35ef8d9fe50387c6dc3b25d2"; // Ganti dengan API key Anda dari OpenWeatherMap
+
+        function getCurrentTime() {
+          const currentTimeElement = document.getElementById("current-time");
+          const currentTime = new Date().toLocaleTimeString("id-ID", {
+            timeStyle: "short",
+            hour12: false
+          });
+          currentTimeElement.innerHTML =
+            "Waktu terkini: " + currentTime;
+        }
+
+        getCurrentTime();
+
+        // Mengupdate waktu setiap menit
+        setInterval(getCurrentTime, 60000);
+      </script>
+  </body>
+</html>

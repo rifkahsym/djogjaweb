@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylekuliner.css" />
+    <title>Kuliner Khas Yogyakarta</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="jogja.html" class="link">dJogja</a></h1>
+        </div>
+    </header>
+
+    <div id="current-time"></div>
+    
+    <main>
+      <audio autoplay loop>
+        <source src="jogjaistimewa.mp3" type="audio/mp3" />
+      </audio>
+     
+
+      <div id="info">
+          <div class="card">
+              <a href="https://youtu.be/k3IjciR7H1E">
+            <img
+              src="https://i.ibb.co/1mtW4JD/gudeg.jpg"
+              alt="nasi-gedug"
+              border="0"
+            /></a>
+            <p>
+              <h3>Gudeg</h3>
+              Gudeg adalah salah satu makanan khas Jogja yang dibuat dari Nangka mentah yang dicampur dengan air kelapa, dibumbui dengan bumbu tertentu dan direbus lama—biasanya selama 4–6 jam. Warna gudeg dihasilkan terutama oleh bumbu rempah-rempah yang digunakan. Rempah-rempah ini juga memberikan cita rasa utama rasa gudeg, karena daging mentah nangka muda sebenarnya tidak memiliki rasa khusus. 
+            </p>
+          </div>
+        
+          <div class="card">
+              <a href="https://youtu.be/BUC8pAyKzRY">
+            <img
+              src="https://i.ibb.co/Yc49vMQ/bakpia.png"
+              alt="bakpia"
+              border="0"
+              width="200"
+              height="150"
+            /></a>
+            <p>
+              <h3>Bakpia</h3>  
+              Bakpia dikenal sebagai kue pie yang berisi kacang hijau. Dalam perkembangannya, isi bakpia lebih bervariasi mengikuti selera pasar, seperti keju, coklat, hingga durian. Bakpia berasal dari pengaruh akulturasi budaya Tionghoa dan Jawa. Bakpia pertama kali dibawa oleh pendatang asal Tiongkok, Kwik Sun Kwok, ke Yogyakarta pada sekitar tahun 1940-an. 
+            </p>
+          </div>
+        
+          <div class="card">
+              <a href="https://youtu.be/Y_hOv-Ea-H8">
+            <img
+              src="https://i.ibb.co/XsdDrMG/sate-klatak.png"
+              alt="sate-klatak"
+              border="0"
+            /></a>
+            <p>
+              <h3>Sate Klatak</h3>
+              Sate klatak adalah sebuah hidangan sate kambing asal Kecamatan Pleret, Kabupaten Bantul, Yogyakarta. Dalam bahasa Jawa, kegiatan membakar sate di pembakaran terbuka disebut "klathak". Sate ini sangat berbeda dari ragam sate lainnya, Tusukan yang dipakai untuk memanggang dan membakar terbuat dari besi. Sate tersebut biasanya disajikan dengan gulai. 
+            </p>
+          </div>
+        
+          <div class="card">
+              <a href="https://youtu.be/OOpaD5qs1yY">
+            <img
+              src="https://i.ibb.co/XbBD5mJ/yangko.png"
+              alt="yangko"
+              border="0"
+            />
+            <p></a>
+              <h3>Yangko</h3>
+              Yangko adalah makanan khas Jogja yang yang terbuat dari tepung ketan. Berbentuk kotak dengan baluran tepung ketan, makanan khas Jogja ini memiliki tekstur kenyal dan rasa yang manis. Yangko berisi campuran cincangan kacang, seperti kue moci asal Jepang. Hanya bedanya, moci lebih lembek dan lebih kenyal dibandingkan Yangko.
+            </p>
+          </div>
+      </div>
+    </main>
+    <a href="menu.html" class="back-button">Back</a>
+    <script>
+      // Mendapatkan waktu dan cuaca saat ini di Jogja menggunakan OpenWeatherMap API
+      const apiKey = "0586443b35ef8d9fe50387c6dc3b25d2"; // Ganti dengan API key Anda dari OpenWeatherMap
+
+      function getCurrentTime() {
+        const currentTimeElement = document.getElementById("current-time");
+        const currentTime = new Date().toLocaleTimeString("id-ID", {
+          timeStyle: "short",
+          hour12: false
+        });
+        currentTimeElement.innerHTML =
+          "Waktu terkini: " + currentTime;
+      }
+
+      getCurrentTime();
+
+      // Mengupdate waktu setiap menit
+      setInterval(getCurrentTime, 60000);
+    </script>
+    <footer>
+  </body>
+</html>

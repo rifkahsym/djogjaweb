@@ -1,0 +1,155 @@
+.element {
+  width: 50%;
+}
+
+/* Stil untuk tampilan desktop atau laptop */
+@media screen and (min-width: 768px) {
+  /* Aturan CSS untuk tampilan desktop atau laptop */
+  /* Misalnya: */
+  .element {
+    font-size: 20px;
+  }
+}
+
+/* Stil untuk tampilan ponsel atau tablet dalam orientasi potrait */
+@media screen and (max-width: 767px) {
+  /* Aturan CSS untuk tampilan ponsel atau tablet */
+  /* Misalnya: */
+  .element {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+header {
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1.5vw;
+  font-family: "system-ui";
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://i.ibb.co/rQ5004M/borobudur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main h1 {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-family: "system-ui";
+}
+
+#current-time {
+  margin-top: 80px;
+  font-family: "system-ui";
+  font-size: 20px;
+}
+
+#weather {
+  margin-bottom: 5px;
+}
+
+#welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: F5FFFA;
+}
+
+#map img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#info {
+  font-family: "Cambria";
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.6;
+  margin-bottom: 80px;
+  width: 80%;
+  display: inline-block;
+}
+
+#info span {
+  background: white;
+  padding: 2px 5px;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+#next-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #f5d2fc;
+  padding: 12px 28px;
+  font-family: "system-ui";
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+#next-button:hover {
+  background-color: #f5d2fc;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 20px 32px;
+  border-radius: 10px;
+  font-weight: bold;
+}

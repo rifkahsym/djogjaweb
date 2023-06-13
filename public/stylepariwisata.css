@@ -1,0 +1,179 @@
+.element {
+  width: 50%;
+}
+
+/* Stil untuk tampilan desktop atau laptop */
+@media screen and (min-width: 768px) {
+  /* Aturan CSS untuk tampilan desktop atau laptop */
+  /* Misalnya: */
+  .element {
+    font-size: 20px;
+  }
+}
+
+/* Stil untuk tampilan ponsel atau tablet dalam orientasi potrait */
+@media screen and (max-width: 767px) {
+  /* Aturan CSS untuk tampilan ponsel atau tablet */
+  /* Misalnya: */
+  .element {
+    font-size: 16px;
+  }
+}
+
+header {
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1.5vw;
+  font-family: "system-ui";
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.column {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+/* Gaya Scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+}
+
+#current-time {
+  font-family: "Cambria";
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://i.ibb.co/rQ5004M/borobudur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "system-ui";
+  text-align: center;
+}
+
+main p {
+  text-align: justify;
+}
+
+#info {
+  font-family: "Cambria";
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.6;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  height: 200px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: "system-ui";
+}
+
+.card p {
+  margin-top: 0;
+}
+
+.back-button {
+  border-style: none;
+  border-radius: 5px;
+  background-color: black;
+  padding: 12px 28px;
+  font-family: "system-ui";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 20px 32px;
+  border-radius: 10px;
+  font-weight: bold;
+}

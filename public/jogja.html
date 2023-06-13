@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylejogja.css" />
+    <title>Infografik Kota Jogja</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="jogja.html" class="link">dJogja</a></h1>
+    </header>
+    <div id="welcome-message">
+      <h3>Selamat datang, <span id="nama"></span>!</h3>
+    </div>
+    <main>
+      <div id="current-time"></div>
+      <div id="weather"></div>
+
+      <div id="map">
+        <a href="https://www.google.com/maps?q=Kota+Jogja">
+          <img
+            src="https://i.ibb.co/DYqmzBW/peta-yogyakarta.jpg"
+            alt="Peta Kota Jogja"
+          />
+        </a>
+      </div>
+
+      <audio autoplay loop>
+        <source src="gamelan2.mp3" type="audio/mp3" />
+      </audio>
+
+      <div id="info">
+        <h3>Mengenal Kota Yogyakarta</h3>
+        <p>
+          Kota Jogja, "Ngayogyakarta", atau dikenal oleh masyarakat setempat
+          dengan sebutan nama Yogya atau Jogja, adalah sebuah kota istimewa yang
+          terletak di Pulau Jawa, Indonesia. Kota ini memiliki sejarah yang kaya
+          dan berperan penting dalam perjuangan kemerdekaan Indonesia. Nama
+          Yogyakarta terambil dari dua kata, yaitu Ayogya atau Ayodhya yang
+          berarti "kedamaian" (atau tanpa perang, a "tidak", yogya merujuk pada
+          yodya atau yudha, yang berarti "perang"), dan Karta yang berarti
+          "baik". Ayodhya merupakan kota yang bersejarah di India di mana
+          wiracarita Ramayana terjadi.
+        </p>
+        <p>
+          Tapak keraton Yogyakarta sendiri menurut babad (misalnya Babad
+          Giyanti) dan leluri (riwayat oral) telah berupa sebuah dalem yang
+          bernama Dalem Gerjiwati; lalu dinamakan ulang oleh Sunan Pakubuwana II
+          sebagai Dalem Ayogya.Secara geografis Provinsi D.I. Yogyakarta
+          terletak pada 8o30'-7o20' LS dan 109o40'-111o0' BT; luas wilayah
+          3.185,80 km2 ; berbatasan dengan: a. Sebelah selatan berbatasan
+          Samudera Indonesia dan dibatasi dengan garis panjang pantai sepanjang
+          110 km.
+        </p>
+        <p>
+          Sejarah Kota Yogyakarta mencakup masa kerajaan Mataram, pendirian
+          Kesultanan Yogyakarta, pembentukan Kota Yogyakarta, serta
+          keistimewaannya sebagai pusat budaya dan pendidikan. Dengan warisan
+          budaya yang kaya dan keindahan alamnya, Yogyakarta terus menjadi salah
+          satu tujuan wisata yang populer di Indonesia.
+        </p>
+      </div>
+      <a href="menu.html"><button id="next-button">MENU</button></a>
+
+      <script>
+        window.onload = function () {
+          var nama = localStorage.getItem("nama");
+          document.getElementById("nama").innerHTML = nama;
+        };
+
+        // Mendapatkan waktu dan cuaca saat ini di Jogja menggunakan OpenWeatherMap API
+        const apiKey = "0586443b35ef8d9fe50387c6dc3b25d2"; // Ganti dengan API key Anda dari OpenWeatherMap
+
+        function getWeather() {
+          fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=Yogyakarta&units=metric&appid=${apiKey}`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              const weatherElement = document.getElementById("weather");
+              const temperature = data.main.temp;
+              const weatherDescription = data.weather[0].description;
+              const weatherIcon = data.weather[0].icon;
+
+              const html = `
+                <h3>Cuaca saat ini:</h3>
+                <p>Temperatur: ${temperature}°C</p>
+                <p>Deskripsi: ${weatherDescription}</p>
+                <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon" />
+              `;
+
+              weatherElement.innerHTML = html;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        }
+
+        function getCurrentTime() {
+          const currentTimeElement = document.getElementById("current-time");
+          const currentTime = new Date().toLocaleTimeString("id-ID", {
+            timeStyle: "short",
+            hour12: false
+          });
+          currentTimeElement.innerHTML =
+            "<strong>Waktu terkini:</strong> " + currentTime;
+        }
+
+        getWeather();
+        getCurrentTime();
+
+        // Mengupdate cuaca setiap menit
+        setInterval(getWeather, 60000);
+
+        // Mengupdate waktu setiap menit
+        setInterval(getCurrentTime, 60000);
+      </script>
+    </main>
+  </body>
+</html>

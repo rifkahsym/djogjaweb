@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylemenu.css" />
+    <title>Pilihan Menu</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="jogja.html" class="link">dJogja</a></h1>
+      <div class="about-us">
+          <a href="aboutus.html" class="link">About Us</a>
+      </div>
+    </header>
+
+    <main>
+      <div id="current-time"></div>
+      <div id="weather"></div>
+      
+      <div id="container">
+        <div class="row">
+          <div class="column">
+            <div class="image">
+              <img
+                src="https://i.ibb.co/MfmSSLW/makanan.jpg"
+                alt="Gambar 1"
+                width="400"
+                height="300"
+              />
+              <div class="overlay">
+                <h2>Kuliner</h2>
+                <div class="button">
+                  <a href="kuliner.html" class="link-menu">Masuk</a></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="image">
+              <img
+                src="https://i.ibb.co/0qH37gq/tempat.jpg"
+                alt="Gambar 2"
+                width="400"
+                height="300"
+              />
+              <div class="overlay">
+                <h2>Pariwisata</h2>
+                <div class="button">
+                  <a href="pariwisata.html" class="link-menu">Masuk</a></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <div class="image">
+              <img
+                src="https://i.ibb.co/GsTqBCZ/tarian.jpg"
+                alt="Gambar 3"
+                width="400"
+                height="300"
+              />
+              <div class="overlay">
+                <h2>Budaya</h2>
+                <div class="button">
+                  <a href="budaya.html" class="link-menu">Masuk</a></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="image">
+              <img
+                src="https://i.ibb.co/GRxtTQw/sejarah.jpg"
+                alt="Gambar 4"
+                width="400"
+                height="300"
+              />
+              <div class="overlay">
+                <h2>Sejarah</h2>
+                <div class="button">
+                  <a href="sejarah.html" class="link-menu">Masuk</a></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <a href="jogja.html" class="back-button">Back</a>
+    <script>
+        // Mendapatkan waktu dan cuaca saat ini di Jogja menggunakan OpenWeatherMap API
+        const apiKey = "0586443b35ef8d9fe50387c6dc3b25d2"; // Ganti dengan API key Anda dari OpenWeatherMap
+
+        function getWeather() {
+          fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=Yogyakarta&units=metric&appid=${apiKey}`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              const weatherElement = document.getElementById("weather");
+              const temperature = data.main.temp;
+              const weatherDescription = data.weather[0].description;
+              const weatherIcon = data.weather[0].icon;
+
+              const html = `
+                  <h3>Cuaca saat ini:</h3>
+                  <p>Temperatur: ${temperature}°C</p>
+                  <p>Deskripsi: ${weatherDescription}</p>
+                  <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon" />
+                `;
+
+              weatherElement.innerHTML = html;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        }
+
+        function getCurrentTime() {
+          const currentTimeElement = document.getElementById("current-time");
+          const currentTime = new Date().toLocaleTimeString("id-ID", {
+            timeStyle: "short",
+            hour12: false
+          });
+          currentTimeElement.innerHTML =
+            "<strong>Waktu terkini:</strong> " + currentTime;
+        }
+
+        getWeather();
+        getCurrentTime();
+
+        // Mengupdate cuaca setiap menit
+        setInterval(getWeather, 60000);
+
+        // Mengupdate waktu setiap menit
+        setInterval(getCurrentTime, 60000);
+      </script>
+  </body>
+</html>
